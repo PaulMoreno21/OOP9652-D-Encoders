@@ -20,8 +20,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product\n" + "id=" + id + "\n name=" + name + 
-                "\n Category=" + Category + "\n stock=" + stock + '\n';
+        return "Producto\n" + "Codigo=" + id + "\n Nombre=" + name + 
+                "\n Categoria=" + Category + "\n stock=" + stock + '\n';
     }
 
     

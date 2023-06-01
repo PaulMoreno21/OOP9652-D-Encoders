@@ -27,12 +27,12 @@ public class Ferrinventory {
             int option =printmenu.printMenu();
             switch(option){
                 case 1:
-                    System.out.println("-----Warehouse 1 -----");
+                    System.out.println("-----Bodega #1 -----");
                     product=registerProduct.Product();
                     products1.add(product);
                     break;
                 case 2 :
-                    System.out.println("-----Warehouse 2 -----");
+                    System.out.println("-----Bodega #2 -----");
                     product=registerProduct.Product();
                     products2.add(product);
                     break;

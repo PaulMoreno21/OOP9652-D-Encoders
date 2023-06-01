@@ -12,11 +12,11 @@ public class RegisterProduct {
     public Product Product(){
         Scanner readProduct = new Scanner(System.in);
         
-        System.out.print("Name: ");
+        System.out.print("Nombre del Producto: ");
         String name = readProduct.nextLine();
-        System.out.print("Category: ");
+        System.out.print("Categoria: ");
         String category = readProduct.nextLine();
-        System.out.print("Id: ");
+        System.out.print("Codigo: ");
         String id = readProduct.nextLine();
         System.out.print("Stock:");
         int stock = readProduct.nextInt();

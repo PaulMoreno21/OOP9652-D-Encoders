@@ -2,26 +2,26 @@
   "Id": 1,
   "products": [
     {
-      "id": 1,
-      "name": "martillo",
-      "Category": "herramienta",
-      "stock": 2
+      "id": "MA25",
+      "name": "Martillo mango de madera",
+      "Category": "Herramienta de golpe",
+      "stock": 0
     },
     {
-      "id": 2,
-      "name": "destornillador",
-      "Category": "herramienta",
-      "stock": 0
+      "id": "DE-025",
+      "name": "Destornillador estrella",
+      "Category": "Desarmadores",
+      "stock": 28
     }
   ]
 }{
   "Id": 2,
   "products": [
     {
-      "id": 1,
-      "name": "mascarilla",
-      "Category": "seguridad",
-      "stock": 5
+      "id": "c911",
+      "name": "Mascarilla",
+      "Category": "Segurida sanitaria",
+      "stock": 10
     }
   ]
 }
