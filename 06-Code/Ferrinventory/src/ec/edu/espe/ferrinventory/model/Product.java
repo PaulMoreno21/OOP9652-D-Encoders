@@ -6,12 +6,12 @@ package ec.edu.espe.ferrinventory.model;
  * @author Moreno Paul,The encoders; DCCO-ESPE
  */
 public class Product {
-    private int id;
+    private String id;
     private String name;
     private String Category;
     private int stock;
 
-    public Product(int id, String name, String Category, int stock) {
+    public Product(String id, String name, String Category, int stock) {
         this.id = id;
         this.name = name;
         this.Category = Category;
@@ -28,14 +28,14 @@ public class Product {
     /**
      * @return the id
      */
-    public int getId() {
+    public String getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
