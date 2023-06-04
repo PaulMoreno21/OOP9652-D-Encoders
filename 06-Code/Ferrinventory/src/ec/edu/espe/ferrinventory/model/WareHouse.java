@@ -13,7 +13,7 @@ public class WareHouse {
 
     @Override
     public String toString() {
-        return "WareHouse\n" + "Id=" + Id + "\nproducts=" + products + '\n';
+        return "Bodega\n" + "Numero=" + Id + "\nproductos=" + products + '\n';
     }
 
     
