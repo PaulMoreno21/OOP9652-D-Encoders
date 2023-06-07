@@ -1,0 +1,15 @@
+{
+  "Id": 1,
+  "products": [
+    {
+      "id": "La-E",
+      "name": "Llave",
+      "category": "Precion",
+      "subCategory": "metal",
+      "brand": "jem",
+      "cost": 12.5,
+      "price": "16,67",
+      "stock": 0
+    }
+  ]
+}

@@ -9,15 +9,27 @@ import java.util.Scanner;
 public class Menu {
 
     int option;
-    public  int printMenu(){
+    public  int printProductMenu(){
         Scanner readOption = new Scanner(System.in);
-        System.out.println("<----FERRINVENTORY---->\n");
-        System.out.println("Que Deseas Hacer?");
-        System.out.println("1. Agregar Productos Al Almacen #1\n");
-        System.out.println("2. Agregar Productos Al Almacen # 2\n");
-        System.out.println("3. Guardar e Imprimir Productos\n");
-        System.out.println("4. Salir del Programa\n");
+        System.out.println("<----BIENVENIDO A FERRINVENTORY---->");
+        System.out.println("Escoja la Bodega:");
+        System.out.println("1. Bodega #1\n");
+        System.out.println("2. Bodega #2\n");
+        System.out.println("3. Salir\n");
         option = readOption.nextInt();
         return option;
     }
+    public  int printMenu(){
+        Scanner readOption = new Scanner(System.in);
+        System.out.println("<----BIENVENIDO A FERRINVENTORY---->");
+        System.out.println("Que deseas hacer ?");
+        System.out.println("1. Agregar productos\n");
+        System.out.println("2. Imprimir reporte de inventario\n");
+        System.out.println("3. Salir\n");
+        option = readOption.nextInt();
+        return option;
+    }
+        
+    
 }
+

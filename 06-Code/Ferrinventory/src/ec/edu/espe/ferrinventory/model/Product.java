@@ -1,6 +1,8 @@
 
 package ec.edu.espe.ferrinventory.model;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author Moreno Paul,The encoders; DCCO-ESPE
@@ -8,22 +10,38 @@ package ec.edu.espe.ferrinventory.model;
 public class Product {
     private String id;
     private String name;
-    private String Category;
+    private String category;
+    private String subCategory;
+    private String brand;
+    private float cost;
+    private String price;
     private int stock;
 
-    public Product(String id, String name, String Category, int stock) {
+    public Product(String id, String name, String category, String subCategory, String brand, float cost, int stock) {
         this.id = id;
         this.name = name;
-        this.Category = Category;
+        this.category = category;
+        this.subCategory = subCategory;
+        this.brand = brand;
+        this.cost = cost;
         this.stock = stock;
+        this.price=calculatePrice();
     }
+    private String calculatePrice() {
+        float costFinal=(float) (cost/1.12);
+        float priceOnSale=(float) (costFinal/0.75);
+        float priceIva = (float) (priceOnSale*1.12);
+        String PVP=String.format("%.2f", priceIva);
+        return PVP;
+        }
 
     @Override
     public String toString() {
-        return "Producto\n" + "Codigo=" + id + "\n Nombre=" + name + 
-                "\n Categoria=" + Category + "\n stock=" + stock + '\n';
+        return "\n\t------------" + "\n\tNombre=" + name+ "\n\tCodigo=" + id  + "\n\tCategoria=" + category + 
+                "\n\tSubcategoria=" + subCategory + "\n\tMarca=" + brand + 
+                "\n\tCosto=" + cost + "\n\tPVP=" + price+ "\n\tstock=" + stock + '\n';
     }
-
+    
     
     /**
      * @return the id
@@ -54,18 +72,75 @@ public class Product {
     }
 
     /**
-     * @return the Category
+     * @return the category
      */
     public String getCategory() {
-        return Category;
+        return category;
     }
 
     /**
-     * @param Category the Category to set
+     * @param category the category to set
      */
-    public void setCategory(String Category) {
-        this.Category = Category;
+    public void setCategory(String category) {
+        this.category = category;
     }
+
+    /**
+     * @return the subCategory
+     */
+    public String getSubCategory() {
+        return subCategory;
+    }
+
+    /**
+     * @param subCategory the subCategory to set
+     */
+    public void setSubCategory(String subCategory) {
+        this.subCategory = subCategory;
+    }
+
+    /**
+     * @return the brand
+     */
+    public String getBrand() {
+        return brand;
+    }
+
+    /**
+     * @param brand the brand to set
+     */
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    /**
+     * @return the cost
+     */
+    public float getCost() {
+        return cost;
+    }
+
+    /**
+     * @param cost the cost to set
+     */
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
+
+    /**
+     * @return the price
+     */
+    public String getPrice() {
+        return price;
+    }
+
+    /**
+     * @param price the price to set
+     */
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
 
     /**
      * @return the stock
@@ -80,6 +155,8 @@ public class Product {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
     
-    
+
+
 }

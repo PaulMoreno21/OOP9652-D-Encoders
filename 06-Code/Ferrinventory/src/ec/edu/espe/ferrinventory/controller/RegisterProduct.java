@@ -11,21 +11,33 @@ import java.util.Scanner;
 public class RegisterProduct {
     public Product Product(){
         Scanner readProduct = new Scanner(System.in);
-        
-        System.out.print("Nombre del Producto: ");
+
+        System.out.print("Nombre:");
         String name = readProduct.nextLine();
+        System.out.print("Id: ");
+        String id = readProduct.nextLine();
         System.out.print("Categoria: ");
         String category = readProduct.nextLine();
-        System.out.print("Codigo: ");
-        String id = readProduct.nextLine();
+        System.out.print("Sub Categoria: ");
+        String subCategory=readProduct.nextLine();
+        System.out.print("Marca: ");
+        String brand=readProduct.nextLine();
         System.out.print("Stock:");
         int stock = readProduct.nextInt();
         while (stock<=-1){
-        System.out.println("No se permite stock negativo");
-        System.out.print("Stock");
-        stock = readProduct.nextInt();
-    }
-        Product product =new Product(id, name, category, stock);
+            System.out.println("No se permite stock negativo");     
+            System.out.print("Stock:");
+            stock = readProduct.nextInt();             
+        }
+        System.out.print("Costo de compra(usar coma):");
+        float cost = readProduct.nextFloat();
+        while(cost<=-1){
+            System.out.println("El costo no puede ser negativo");
+            System.out.print("Costo de compra:");
+            cost = readProduct.nextFloat();
+        }
+        Product product=new Product(id, name, category, subCategory, brand, cost, stock);
         return product;
     }
+    
 }

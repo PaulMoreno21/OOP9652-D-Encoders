@@ -1,0 +1,15 @@
+{
+  "Id": 2,
+  "products": [
+    {
+      "id": "DE-E",
+      "name": "Destornillador",
+      "category": "Estrella",
+      "subCategory": "Manual",
+      "brand": "jem",
+      "cost": 12.5,
+      "price": "16,67",
+      "stock": 0
+    }
+  ]
+}

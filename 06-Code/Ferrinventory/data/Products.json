@@ -2,26 +2,17 @@
   "Id": 1,
   "products": [
     {
-      "id": "MA25",
-      "name": "Martillo mango de madera",
-      "Category": "Herramienta de golpe",
+      "id": "25-B",
+      "name": "Martillo",
+      "category": "manual",
+      "subCategory": "madera",
+      "brand": "dewalt",
+      "cost": 21.85,
+      "price": "29,13",
       "stock": 0
-    },
-    {
-      "id": "DE-025",
-      "name": "Destornillador estrella",
-      "Category": "Desarmadores",
-      "stock": 28
     }
   ]
 }{
   "Id": 2,
-  "products": [
-    {
-      "id": "c911",
-      "name": "Mascarilla",
-      "Category": "Segurida sanitaria",
-      "stock": 10
-    }
-  ]
+  "products": []
 }
