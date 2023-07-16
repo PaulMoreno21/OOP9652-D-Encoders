@@ -55,6 +55,18 @@ public class FrmSuplier extends javax.swing.JFrame {
 
         jLabel5.setText("Direccion");
 
+        txtNameSuplier.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameSuplierKeyTyped(evt);
+            }
+        });
+
+        txtPhoneSuplier.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPhoneSuplierKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -192,6 +204,22 @@ public class FrmSuplier extends javax.swing.JFrame {
         frmBuyMenu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnCancelSuplierActionPerformed
+
+    private void txtNameSuplierKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameSuplierKeyTyped
+        if(!(Character.isLetter(evt.getKeyChar()))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtNameSuplierKeyTyped
+
+    private void txtPhoneSuplierKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhoneSuplierKeyTyped
+        int key = evt.getKeyChar();
+        
+        boolean number = key >= 48 && key <= 57;
+        
+        if (!number){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtPhoneSuplierKeyTyped
 
     /**
      * @param args the command line arguments

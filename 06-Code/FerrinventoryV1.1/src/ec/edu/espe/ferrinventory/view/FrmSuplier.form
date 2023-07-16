@@ -137,8 +137,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNameSuplier">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNameSuplierKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPhoneSuplier">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPhoneSuplierKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtSuplier">
         </Component>
