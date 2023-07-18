@@ -153,9 +153,6 @@
         <Component class="javax.swing.JTextField" name="txtUser">
         </Component>
         <Component class="javax.swing.JPasswordField" name="pswUser">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pswUserActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -202,6 +199,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Registrarse"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSignUpActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnClose">
           <Properties>
