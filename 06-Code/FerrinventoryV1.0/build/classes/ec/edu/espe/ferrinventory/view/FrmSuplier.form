@@ -73,7 +73,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txtPhoneSuplier" pref="190" max="32767" attributes="0"/>
                           <Component id="txtNameSuplier" max="32767" attributes="0"/>
-                          <Component id="txtSuplier" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtEmailSuplier" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="txtDirectionSuplier" min="-2" pref="190" max="-2" attributes="0"/>
                   </Group>
@@ -100,7 +100,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" max="32767" attributes="0"/>
-                      <Component id="txtSuplier" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtEmailSuplier" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -140,7 +140,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtPhoneSuplier">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtSuplier">
+        <Component class="javax.swing.JTextField" name="txtEmailSuplier">
         </Component>
         <Component class="javax.swing.JTextField" name="txtDirectionSuplier">
         </Component>

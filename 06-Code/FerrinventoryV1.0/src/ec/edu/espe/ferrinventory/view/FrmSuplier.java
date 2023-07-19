@@ -33,7 +33,7 @@ public class FrmSuplier extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtNameSuplier = new javax.swing.JTextField();
         txtPhoneSuplier = new javax.swing.JTextField();
-        txtSuplier = new javax.swing.JTextField();
+        txtEmailSuplier = new javax.swing.JTextField();
         txtDirectionSuplier = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         btnNewSuplier = new javax.swing.JButton();
@@ -71,7 +71,7 @@ public class FrmSuplier extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(txtPhoneSuplier, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
                         .addComponent(txtNameSuplier)
-                        .addComponent(txtSuplier))
+                        .addComponent(txtEmailSuplier))
                     .addComponent(txtDirectionSuplier, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -91,7 +91,7 @@ public class FrmSuplier extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtSuplier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtEmailSuplier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -245,9 +245,9 @@ public class FrmSuplier extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField txtDirectionSuplier;
+    private javax.swing.JTextField txtEmailSuplier;
     private javax.swing.JTextField txtNameSuplier;
     private javax.swing.JTextField txtPhoneSuplier;
-    private javax.swing.JTextField txtSuplier;
     // End of variables declaration//GEN-END:variables
 
 }

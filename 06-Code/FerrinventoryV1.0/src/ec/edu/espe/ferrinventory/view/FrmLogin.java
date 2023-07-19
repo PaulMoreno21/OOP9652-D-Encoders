@@ -10,6 +10,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
+import ec.edu.espe.ferrinventory.controller.DataBase;
 import ec.edu.espe.ferrinventory.model.User;
 import ec.edu.espe.ferrinventory.utils.ValidateField;
 import javax.swing.JOptionPane;
@@ -190,30 +191,7 @@ public class FrmLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     public void createDocument() {
-        String uri ="mongodb+srv://pmoreno:pmoreno@cluster0.to6ri80.mongodb.net/?retryWrites=true&w=majority";
-        try(MongoClient mongoClient = MongoClients.create(uri)){
-            MongoDatabase database = mongoClient.getDatabase("FarmAnimal");
-            MongoCollection<Document> collection = database.getCollection("User");
-
-            String user = txtUser.getText();
-            String pasword = pswUser.getText();
-
-            String encrypt = "";
-            int add = 1;
-
-            for (int i = 0; i < pasword.length(); i++) {
-
-                int Rename = pasword.codePointAt(i);
-
-                char letterAdd = (char) (Rename + add);
-
-                encrypt = encrypt + letterAdd;
-            }
-
-            Document doc1 = new Document("User", user).append("Pasword", encrypt);
-
-            collection.insertOne(doc1);
-        }
+        
     }
     private void emptyFiled() {
 
@@ -223,7 +201,7 @@ public class FrmLogin extends javax.swing.JFrame {
     }
     private void btnLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogInActionPerformed
 
-        String uri ="mongodb+srv://pmoreno:pmoreno@cluster0.to6ri80.mongodb.net/?retryWrites=true&w=majority";
+       /* String uri ="mongodb+srv://pmoreno:pmoreno@cluster0.to6ri80.mongodb.net/?retryWrites=true&w=majority";
         try(MongoClient mongoClient = MongoClients.create(uri)){
             MongoDatabase database = mongoClient.getDatabase("Ferrinventory");
             MongoCollection<Document> collection = database.getCollection("User");
@@ -246,12 +224,12 @@ public class FrmLogin extends javax.swing.JFrame {
             if (userDocument != null) {
                 String storedPassword = userDocument.getString("Pasword");
                 if (storedPassword.equals(encrypted)) {
-
+*/
                    
                     FrmMainMenu main = new FrmMainMenu();
                     main.setVisible(true);
                     this.setVisible(false);
-
+/*
                 } else {
                     JOptionPane.showMessageDialog(null, "Contraseña incorrecta");
                     txtUser.setText("");
@@ -265,7 +243,7 @@ public class FrmLogin extends javax.swing.JFrame {
         } catch (MongoException e) {
             JOptionPane.showMessageDialog(null, "Error al conectar con la base de datos");
             e.printStackTrace();
-        }
+        }*/
     }//GEN-LAST:event_btnLogInActionPerformed
 
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
@@ -273,34 +251,10 @@ public class FrmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCloseActionPerformed
 
     private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
-        User user;
-        ValidateField validation = new ValidateField();
-        
-        String userName;
-        String pasword;
-        
-        boolean validate;
-        if(validation.ValidateString(txtUser.getText())){
-            validate = true;
-            userName = txtUser.getText();
-        } else {
-          validate = false;
-          JOptionPane.showMessageDialog(null, "Solo Letras Para El Usuario");
-        }
-        
-        userName = txtUser.getText();
-        pasword =pswUser.getText();
-        user = new User(userName, pasword);
-
-        int option = JOptionPane.showConfirmDialog(this, "Registrar:  \n");
-
-        if (option == 0) {
-            JOptionPane.showMessageDialog(rootPane, "Registrado con exito");
-            createDocument();
-            emptyFiled();
-        }
-
-        emptyFiled();
+     DataBase dtb = new DataBase();
+     String user = txtUser.getText();
+     String password = pswUser.getText();
+     dtb.singUp(user, password);
     }//GEN-LAST:event_btnSignUpActionPerformed
 
     /**
