@@ -21,7 +21,7 @@ public class MongoDB {
     
     public void connect(String collections){
         String uri = "mongodb+srv://pmoreno:pmoreno@cluster0.to6ri80.mongodb.net/?retryWrites=true&w=majority";
-        String db ="HighSchool";
+        String db ="Ferrinventory";
         mongoClient = MongoClients.create(uri);
         database = mongoClient.getDatabase(db);
         collection = database.getCollection(collections);
