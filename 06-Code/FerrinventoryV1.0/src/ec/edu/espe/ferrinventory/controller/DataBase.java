@@ -40,7 +40,7 @@ public class DataBase {
     
     public void createDocument(String id,String name,String category,String brand,float Cost,float Price, int Stock){
         MongoDB db= new MongoDB();
-        db.connect("Product");
+        db.connect("Products");
         MongoCollection<org.bson.Document> collection = db.getCollection();  
         Document doc1 = new Document("id", id).append("Name", name).append
         ("Category", category).append("brand", brand).append("Cost",Cost).append("Price",Price).append("Stock",Stock);

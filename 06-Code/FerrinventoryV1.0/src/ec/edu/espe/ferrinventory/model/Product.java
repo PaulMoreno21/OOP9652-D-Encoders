@@ -12,7 +12,7 @@ public class Product {
     private String category;
     private String brand;
     private float cost;
-    private String price;
+    private float price;
     private int stock;
 
     public Product(String id, String name, String category,String brand, float cost, int stock) {
@@ -24,12 +24,11 @@ public class Product {
         this.stock = stock;
         this.price=calculatePrice();
     }
-    private String calculatePrice() {
+    private float calculatePrice() {
         float costFinal=(float) (cost/1.12);
         float priceOnSale=(float) (costFinal/0.75);
         float priceIva = (float) (priceOnSale*1.12);
-        String PVP=String.format("%.2f", priceIva);
-        return PVP;
+        return priceIva;
         }
 
     @Override
@@ -115,14 +114,14 @@ public class Product {
     /**
      * @return the price
      */
-    public String getPrice() {
+    public float getPrice() {
         return price;
     }
 
     /**
      * @param price the price to set
      */
-    public void setPrice(String price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
