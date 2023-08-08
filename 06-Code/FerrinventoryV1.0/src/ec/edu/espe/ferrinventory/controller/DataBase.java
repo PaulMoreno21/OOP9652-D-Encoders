@@ -48,7 +48,7 @@ public class DataBase {
         collection.insertOne(doc1);
     }
     
-    public static void deleteDocument(String del){
+    public  void deleteDocument(String del){
         MongoDB db= new MongoDB();
         db.connect("Product");
         MongoCollection<org.bson.Document> collection = db.getCollection(); 
@@ -56,7 +56,7 @@ public class DataBase {
         collection.deleteOne(filter);
     }
     
-    public static void readDocument(String search){
+    public  void readDocument(String search){
             MongoDB db= new MongoDB();
             db.connect("Product");
             MongoCollection<org.bson.Document> collection = db.getCollection();
@@ -72,7 +72,7 @@ public class DataBase {
         
     }
     
-    public static void modifyDocument(String search,String name,String category,String brand,float Cost,float Price, int Stock){
+    public  void modifyDocument(String search,String name,String category,String brand,float Cost,float Price, int Stock){
         MongoDB db= new MongoDB();
         db.connect("Product");
         MongoCollection<org.bson.Document> collection = db.getCollection();

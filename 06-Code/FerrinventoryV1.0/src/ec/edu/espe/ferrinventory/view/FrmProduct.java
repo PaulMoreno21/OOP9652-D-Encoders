@@ -100,9 +100,8 @@ public class FrmProduct extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtPrice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                        .addComponent(txtCost, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(txtPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .addComponent(txtCost)
                     .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                     .addComponent(txtCategory)
                     .addComponent(txtBrand))
@@ -167,10 +166,25 @@ public class FrmProduct extends javax.swing.JFrame {
         });
 
         btnSearch.setText("Buscar");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         BtnDelete.setText("Borrar");
+        BtnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDeleteActionPerformed(evt);
+            }
+        });
 
         BtnModify.setText("Modificar");
+        BtnModify.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModifyActionPerformed(evt);
+            }
+        });
 
         btnCancel.setText("Cancelar");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -278,7 +292,7 @@ public class FrmProduct extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
-        // TODO add your handling code here:
+        empltyFields();
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -293,6 +307,32 @@ public class FrmProduct extends javax.swing.JFrame {
          
          db.createDocument(id, name, category, brand, cost, price, stock);
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        DataBase db = new DataBase(); 
+        String id =txtId.getText();      
+        db.readDocument(id);
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void BtnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDeleteActionPerformed
+        DataBase db = new DataBase(); 
+        String id =txtId.getText();
+        
+        db.deleteDocument(id);
+    }//GEN-LAST:event_BtnDeleteActionPerformed
+
+    private void BtnModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModifyActionPerformed
+        DataBase db = new DataBase(); 
+        String id =txtId.getText();
+        String name = txtName.getText();
+        String category = txtCategory.getText();
+        String brand = txtBrand.getText();
+        float cost = Float.parseFloat(txtCost.getText());
+        float price = calculatePrice(cost);
+        int stock = Integer.parseInt(txtStock.getText());
+        
+        db.modifyDocument(id, name, category, brand, cost, price, stock);
+    }//GEN-LAST:event_BtnModifyActionPerformed
 
     /**
      * @param args the command line arguments
