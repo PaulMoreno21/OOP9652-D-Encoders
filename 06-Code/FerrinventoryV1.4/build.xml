@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="FerrInventory" default="compile" basedir=".">
+    <description>
+        FerrInventory project build file.
+    </description>
+
+    <!-- Defining properties -->
+    <property name="src.dir" value="src" />
+    <property name="build.dir" value="build" />
+
+    <!-- Define libraries -->
+    <path id="lib.path">
+        <!-- Include your library JARs here -->
+        <pathelement location="lib/gson.jar" />
+        <pathelement location="lib/mongo-java-driver-3.12.14.jar" />
+        <!-- Add more library paths as needed -->
+    </path>
+
+    <target name="init">
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+            <classpath refid="lib.path" />
+        </javac>
+    </target>
+</project>
